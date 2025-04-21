@@ -1,0 +1,16 @@
+span{
+    background-color: rgb(254, 128, 208);
+}
+.blue{color: blue;
+}
+.bluetext{color: blue;}
+p{font-family:arial}
+
+#bigger{font-size: 48;}
+
+
+body{
+    background-color: teal;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
