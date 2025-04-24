@@ -1,3 +1,4 @@
+//Assignment 11 - Ingrid Lickiss
 // Player
 let x = 50;
 let y = 50;
@@ -16,9 +17,9 @@ let squareY = 50;
 let ySpeed = 10;
 
 // Circle obstacle
-let circleX = 300;  // Starting position for the circle
-let circleY = 100;  // Starting position for the circle
-let circleSpeed = 5; // Speed for circle movement
+let circleX = 300;
+let circleY = 100;
+let circleSpeed = 5;
 
 // FUNCTION SETUP *_+_*<3*_+_*
 function setup() {
@@ -34,12 +35,12 @@ function draw() {
   circle(x, y, diameter);
 
   // Obstacle Square
-  fill(30, 200, 29);
+  fill("blue");
   square(squareX, squareY, 55);
 
   // Obstacle Circle
-  fill(200, 50, 50); // Red color for circle
-  ellipse(circleX, circleY, 55, 55); // Draw the circle
+  fill("yellow");
+  ellipse(circleX, circleY, 55, 55);
 
   // Exit boxes
   fill("grey");
@@ -61,15 +62,11 @@ function draw() {
     text("You Won!", width / 2, height / 2);
   }
 
-  // Mouse position
-  fill(255);
-  text(`mouseX: ${mouseX}, mouseY: ${mouseY}`, 20, 20);
-
   // Clicker obstacle
   fill("red");
   circle(mousex, mousey, 50);
 
-  // Obstacle Movement for Square
+  // Square Obstacle Movement
   squareX += random(0, 10);
   squareY += ySpeed;
   if (squareY >= 450 || squareY <= 0) {
@@ -80,9 +77,9 @@ function draw() {
     squareX = 0;
   }
 
-  // Obstacle Movement for Circle (same logic as the square)
-  circleX += random(0, 10);  // Random movement in the x-direction
-  circleY += circleSpeed;  // Constant speed in the y-direction
+  // Circle Obstacle Movement
+  circleX += random(0, 10);
+  circleY += circleSpeed;
   
   if (circleY >= 450 || circleY <= 0) {
     circleSpeed *= -1; // bounce
@@ -109,9 +106,9 @@ function draw() {
     y = 0;
   }
 
-  if (keyIsDown(83)) { // S
+  if (keyIsDown(83)) {
     y += 10;
-  } else if (keyIsDown(87)) { // W
+  } else if (keyIsDown(87)) {
     y -= 10;
   }
 
@@ -119,7 +116,7 @@ function draw() {
     y = 465;
   }
 
-  if (keyIsDown(65)) { // A
+  if (keyIsDown(65)) {
     x -= 10;
   } else if (keyIsDown(68)) { // D
     x += 10;
