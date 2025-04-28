@@ -1,4 +1,4 @@
-Read.Me
+Read.Md
 
 PROPOSAL - PHANEROZOIC JUMP
 ---------------------------
